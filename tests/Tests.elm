@@ -32,5 +32,8 @@ all =
             \() ->
                 Favicon.fromUrl "http://elm-lang.org"
                     |> Expect.equal (Just "http://elm-lang.org/favicon.ico")
-          -- TODO: handle trailing slashes
+        , test "URL with trailing slash" <|
+            \() ->
+                Favicon.fromUrl "http://elm-lang.org/"
+                    |> Expect.equal (Just "http://elm-lang.org/favicon.ico")
         ]
