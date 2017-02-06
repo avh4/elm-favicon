@@ -12,4 +12,6 @@ fromUrl urlString =
         Erl.toString
             { url
                 | path = [ "favicon.ico" ]
+                , hash = ""
+                , query = []
             }
